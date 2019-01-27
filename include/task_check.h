@@ -1,8 +1,8 @@
 #ifndef TASKCHECK_H
 #define TASKCHECK_H
-
-
-
+#include<string>
+#include <utility>
+#include <algorithm>
 class TaskCheck
 {
 	public:
@@ -12,18 +12,14 @@ class TaskCheck
 
 		void swap(TaskCheck &check) 
 		{
-			/*scriptPubKey.swap(check.scriptPubKey);
-			std::swap(ptxTo, check.ptxTo);
-			std::swap(amount, check.amount);
-			std::swap(nIn, check.nIn);
-			std::swap(nFlags, check.nFlags);
-			std::swap(cacheStore, check.cacheStore);
-			std::swap(error, check.error);
-			std::swap(txdata, check.txdata);*/
 
+			std::swap(task_id_, check.task_id_);
 		}
+	public:
+		void setTaskId(uint64_t task_id);
 
-private:
+	private:
+		uint64_t task_id_;
 	
 };
 
